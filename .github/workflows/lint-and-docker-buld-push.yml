@@ -11,13 +11,6 @@ jobs:
   super-lint:
     name: Lint the Code Base
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: read
-      # To report GitHub Actions status checks
-      
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
