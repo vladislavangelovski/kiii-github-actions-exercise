@@ -52,4 +52,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: user/app:latest
+          tags: vlade25/kiii-github-actions-exercise-01:latest
