@@ -5,8 +5,8 @@ on:  # yamllint disable-line rule:truthy
   push:
   
 jobs:
-  build:
-    name: Lint
+  super-lint:
+    name: Lint the Code Base
     runs-on: ubuntu-latest
 
     permissions:
@@ -29,6 +29,8 @@ jobs:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   docker:
+    name: Docker Build and Push to DockerHub
+    needs: [super-lint]
     runs-on: ubuntu-latest
     steps:
       -
