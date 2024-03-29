@@ -1,8 +1,11 @@
 ---
-name: Lint-and-Docker-build-and-push-to-DockerHub
+name: Lint Code Base and Docker Build and Push
 
 on:  # yamllint disable-line rule:truthy
   push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   
 jobs:
   super-lint:
